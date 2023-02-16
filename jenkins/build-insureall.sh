@@ -1,7 +1,7 @@
 set +x
 LocalWorkspace=${WORKSPACE}
 WARFilePath="$LocalWorkspace/target/insureall-service.war
-echo "WAR File Path is ( Source path from the server) : $WARFilePath"
+echo "WAR File Path is (Source path from the server) : $WARFilePath"
 
 foldername="Insureall-Service-$(date +"%d-%m-%Y-%H-%M-%S")"
 mkdir -p "$LocalWorkspace/target/insureall-service.war/$foldername"
