@@ -27,7 +27,7 @@ if [ -z "$BuildLabelToDeploy" ]
 then
 # IDENTIFYING THE LATEST FOLDER TO DOWNLOAD "
 echo "############ Finding the latest Folder name from where we have to download the WAR Files. For Service :  $ServiceToDeploy ################ "
-LatestFileName=$(/usr/local/bin/aws s3api list-objects-v2 --bucket "cintap-cloud-services-artifacts" --prefix "Builds/$ServiceToDeploy/" --query 'reverse(sort_by(Contents,&LastModified))[0].Key')
+LatestFileName=$(/usr/local/bin/aws s3api list-objects-v2 --bucket "insureall" --prefix "Builds/$ServiceToDeploy/" --query 'reverse(sort_by(Contents,&LastModified))[0].Key')
 LatestFileNameArray=(${LatestFileName//// })
 LatestFolderToDownload=${LatestFileNameArray[2]}
 else
@@ -123,6 +123,9 @@ then
 elif [[ $ServiceToDeploy == "CintapApps" ]]
 then 
   HealthCheckComponentToCheck="cintap-apps-service-v2"
+elif [[ $ServiceToDeploy == "Insureall" ]]
+then 
+  HealthCheckComponentToCheck="insureall-service"  
 elif [[ $ServiceToDeploy == "OTC" ]]
 then 
   HealthCheckComponentToCheck="otc-service"
