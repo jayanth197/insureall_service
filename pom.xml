@@ -10,7 +10,6 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.insureall</groupId>
-	<packaging>war</packaging>
 	<artifactId>insureall-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>insureall-service</name>
@@ -67,7 +66,6 @@
 	</dependencies>
 
 	<build>
-		<finalName>insureall-service</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
