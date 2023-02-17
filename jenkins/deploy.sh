@@ -44,7 +44,7 @@ echo "Folder is created : $LocalDeploymentDirectory"
 
 
 # DOWNLOADING THE FILES FROM S3 TO LOCAL DEPLOYMENT DIRECTORY
-FilesToDownload="s3://cintap-cloud-services-artifacts/Builds/$ServiceToDeploy/$LatestFolderToDownload/"
+FilesToDownload="s3://insureall/Builds/$ServiceToDeploy/$LatestFolderToDownload/"
 echo "Starting - Downloading file(s) from $FilesToDownload to $LocalDeploymentDirectory/"
 echo "Copy Command : /usr/local/bin/aws s3 cp $FilesToDownload $LocalDeploymentDirectory/"
 /usr/local/bin/aws s3 cp $FilesToDownload $LocalDeploymentDirectory --recursive
