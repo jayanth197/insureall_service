@@ -104,7 +104,7 @@ echo "### Completed - Stopped the tomcat service on the remote server ###"
 
 ### Copying latest files to Tomcat
 echo "### Starting - Copying WAR file(s) to the server : $TargetServer ###" 
-scp -p -r  /var/lib/jenkins/jobs/DeployWARByService/workspace/Deployment/* root@$TargetServer:/usr/local/tomcat9/webapps/
+scp -p -r  /var/lib/jenkins/jobs/workspace/DeployWARByService/Deployment/* root@$TargetServer:/usr/local/tomcat9/webapps/
 echo "### Completed - Copying WAR file(s) to the server : $TargetServer ###" 
 
 ### Starting tomcat service
